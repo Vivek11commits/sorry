@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cuteness 1000% 💗</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    min-height:100vh;
+    font-family:"Comic Sans MS",cursive;
+    background:linear-gradient(135deg,#ffd1e3,#f7e2ff,#d9e8ff);
+    overflow-x:hidden;
+}
+
+/* INTRO */
+
+.intro{
+    position:fixed;
+    inset:0;
+    z-index:99;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    background:linear-gradient(135deg,#ffafd2,#ffe5f1,#ded0ff);
+    animation:introHide 1.2s ease 5s forwards;
+}
+
+.face{
+    font-size:90px;
+    animation:bounce .8s infinite alternate;
+}
+
+.intro h1{
+    color:#ff3f8c;
+    font-size:clamp(40px,9vw,75px);
+    text-shadow:3px 3px white;
+    animation:pulse 1s infinite;
+    text-align:center;
+}
+
+#percent{
+    margin-top:10px;
+    font-size:30px;
+    font-weight:bold;
+    color:#713c6c;
+}
+
+.bar{
+    width:min(500px,80%);
+    height:25px;
+    background:white;
+    border-radius:50px;
+    overflow:hidden;
+    margin-top:20px;
+}
+
+.progress{
+    width:0%;
+    height:100%;
+    background:linear-gradient(90deg,#ff4c96,#956cff);
+    animation:loading 4s forwards;
+}
+
+@keyframes loading{
+    to{width:100%}
+}
+
+@keyframes bounce{
+    to{
+        transform:translateY(-25px) rotate(5deg);
+    }
+}
+
+@keyframes pulse{
+    50%{
+        transform:scale(1.08);
+    }
+}
+
+@keyframes introHide{
+    to{
+        opacity:0;
+        visibility:hidden;
+        transform:scale(1.2);
+    }
+}
+
+/* CARD */
+
+.page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:25px;
+}
+
+.card{
+    width:min(560px,94vw);
+    padding:30px;
+    text-align:center;
+    background:rgba(255,255,255,.92);
+    border:4px solid #ff9bc5;
+    border-radius:32px;
+    box-shadow:0 20px 55px rgba(150,70,120,.25);
+    animation:cardIn 1.5s ease;
+}
+
+@keyframes cardIn{
+    from{
+        opacity:0;
+        transform:translateY(100px) scale(.7) rotate(-5deg);
+    }
+    to{
+        opacity:1;
+        transform:none;
+    }
+}
+
+.big{
+    font-size:70px;
+    animation:pulse 1.2s infinite;
+}
+
+.card h2{
+    color:#ff438c;
+    font-size:45px;
+    margin:5px 0 15px;
+}
+
+.message{
+    color:#633c5e;
+    font-size:19px;
+    line-height:1.7;
+}
+
+.highlight{
+    color:#ff3d87;
+    font-weight:bold;
+}
+
+/* IMAGES */
+
+.gallery{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin:20px 0;
+}
+
+.gallery img{
+    width:100%;
+    height:210px;
+    object-fit:cover;
+    border-radius:18px;
+    border:3px solid #ffc0d9;
+    box-shadow:0 8px 20px rgba(160,80,120,.18);
+}
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+    margin:12px 5px 5px;
+    padding:15px 25px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(90deg,#ff4d94,#906bff);
+    color:white;
+    font-family:inherit;
+    font-size:18px;
+    font-weight:bold;
+    text-decoration:none;
+    cursor:pointer;
+    box-shadow:0 8px 20px rgba(150,70,150,.3);
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.08);
+}
+
+.note{
+    margin-top:10px;
+    color:#8b5b82;
+}
+
+/* FLOATING HEARTS */
+
+.heart{
+    position:fixed;
+    bottom:-50px;
+    z-index:50;
+    pointer-events:none;
+    animation:floatUp linear forwards;
+}
+
+@keyframes floatUp{
+    to{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+@media(max-width:520px){
+
+    .card{
+        padding:20px;
+    }
+
+    .card h2{
+        font-size:36px;
+    }
+
+    .gallery img{
+        height:150px;
+    }
+
+    .btn{
+        font-size:16px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- CUTENESS INTRO -->
+
+<div class="intro">
+
+    <div class="face">🥺💗</div>
+
+    <h1>CUTENESS 1000%</h1>
+
+    <div id="percent">0%</div>
+
+    <div class="bar">
+        <div class="progress"></div>
+    </div>
+
+    <p>Checking cuteness... 🐰✨</p>
+
+</div>
+
+
+<!-- SORRY CARD -->
+
+<div class="page">
+
+<div class="card">
+
+    <div class="big">🥺💗</div>
+
+    <h2>I'm Sorry...</h2>
+
+
+    <p class="message">
+
+        I know I made a mistake... 🥺
+        <br>
+
+        I never wanted to hurt you. 💔
+
+        <br>
+
+        You really mean a lot to me. 💗
+
+        <br><br>
+
+        Please forgive me... 🫶
+
+        <br>
+
+        <span class="highlight">
+            Please Unblock Me 👉👈
+        </span>
+
+    </p>
+
+
+
+
+
+    <p class="message">
+
+        <span class="highlight">
+            Cuteness = 1000% 💕
+        </span>
+
+        <br><br>
+
+        Ek chhoti si request... 🥺
+
+        <br>
+
+        <span class="highlight">
+            Mujhe unblock kar do ❤️
+        </span>
+
+    </p>
+
+
+    <!-- INSTAGRAM BUTTON -->
+
+    <a
+    class="btn"
+    href="https://www.instagram.com/vivek.kandpal_11?stkn=amZ3OTZ2eDhqcmsy"
+    target="_blank">
+
+        💗 Open Instagram 💗
+
+    </a>
+
+
+    <button
+    class="btn"
+    onclick="openInstagram()">
+
+        🥺 Unblock Me & Open Instagram
+
+    </button>
+
+
+    <p class="note">
+        Button dabao → Instagram profile open hoga 💕
+    </p>
+
+    <p class="note">
+        I really miss our talks... 🥹💗
+    </p>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* 0% TO 1000% */
+
+let number = 0;
+
+let counter = setInterval(function(){
+
+    number += 10;
+
+    if(number >= 1000){
+
+        number = 1000;
+
+        clearInterval(counter);
+    }
+
+    document.getElementById("percent").innerText =
+        number + "% 💗";
+
+},40);
+
+
+/* FLOATING HEARTS */
+
+function createHeart(){
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    const list = [
+        "💗",
+        "💕",
+        "💖",
+        "💘",
+        "💓",
+        "🌸",
+        "✨",
+        "🥺"
+    ];
+
+    heart.innerHTML =
+        list[Math.floor(Math.random()*list.length)];
+
+    heart.style.left =
+        Math.random()*100 + "vw";
+
+    heart.style.fontSize =
+        (18 + Math.random()*30) + "px";
+
+    heart.style.animationDuration =
+        (4 + Math.random()*5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(function(){
+        heart.remove();
+    },9000);
+}
+
+setInterval(createHeart,350);
+
+
+/* INSTAGRAM BUTTON */
+
+function openInstagram(){
+
+    window.open(
+        "https://www.instagram.com/vivek.kandpal_11?stkn=amZ3OTZ2eDhqcmsy",
+        "_blank"
+    );
+
+}
+
+</script>
+
+</body>
+</html>
